@@ -4,13 +4,13 @@
     </head>
     <body>
         <div>
-            @yield('testview', View::make('component.header',['test'=>$name]))
+            @yield('testview', View::make('component.header'))
         </div>
         <div>
-            @yield('testview', View::make('component.content',['test'=>$name]))
+            @yield('testview', View::make('component.content',['content'=>$content,'data'=>$data]))
         </div>
         <div>
-            @yield('testview', View::make('component.footer',['test'=>$name]))
+            @yield('testview', View::make('component.footer'))
         </div>
     </body>
 </html>

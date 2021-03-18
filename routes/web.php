@@ -13,9 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcomer');
-});
+// Route::get('/', function () {
+//     return view('app');
+// })->name('home');
+
+// App Router
+
+// Home
+Route::get('/', 'HomeController@index')->name('home');
+
+// Product
+Route::get('/product', 'ProductController@index')->name('product');
+
+//Promo
+Route::get('/promo', 'PromoController@index')->name('promo');
+
+// Contact
+Route::get('/contact', 'ContactController@index')->name('contact');
 
 // Router Produk
 Route::get('/produk', 'ProdukController@index');
