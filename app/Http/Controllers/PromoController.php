@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class PromoController extends Controller
 {
@@ -13,11 +14,12 @@ class PromoController extends Controller
      */
     public function index()
     {
-        //
+        $content = 'Promo';
+        $products = Product::select('id','nama','stok','kategori','photo','deskripsi','kondisi_produk','harga')->where('promo',1)->get();
         // Response Data Pack
         $data = [
             'content'=>$content,
-            'datas'=>''
+            'data'=>$products
         ];
 
         return view('app',$data);

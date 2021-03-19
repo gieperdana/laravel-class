@@ -34,8 +34,22 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $product = new Product;
+
+        $product->nama = $request->input('name');
+        $product->stok = $request->input('stok');
+        $product->kategori = 'Test';
+        $product->photo = 'photo';
+        $product->deskripsi = 'Deskripsi';
+        $product->kondisi_produk = 'Baru';
+        $product->harga = $request->input('harga');
+        $product->promo = 0;
+
+        if($product->save()){
+            return redirect()->route('product');
+        }
         //
     }
 

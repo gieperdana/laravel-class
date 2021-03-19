@@ -14,9 +14,10 @@ class ContactController extends Controller
     public function index()
     {
         //
+        $content = 'Contact';
         $data = [
             'content'=>$content,
-            'data'=>''
+            'data'=>'This is contact'
         ];
         return view('app',$data);
     }

@@ -13,11 +13,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
+       //Content description
+       $content = 'Home';
        // Response Data Pack
        $data = [
         'content'=>$content,
-        'data'=>''
+        'data'=>'This is home'
         ];  
 
         return view('app',$data);
