@@ -56,3 +56,7 @@ Route::delete('/produk', 'ProdukController@hapus');
 
 Route::resource('photos', 'PhotoController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
